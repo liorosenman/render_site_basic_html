@@ -13,9 +13,10 @@
 <script>
         const url = 'https://render-site-basic.onrender.com';   
         axios.get(url)
-            .then(response =>           
-                // console.log('Response Data:', response.data);
-                document.getElementById('server_answer').innerText = "response.data"
+            .then(response =>  {         
+                console.log('Response Data:', response.data.message)
+                document.getElementById('server_answer').innerText = response.data.message
+            }
             )
             .catch(error => {
          
